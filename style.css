@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins",'sans-serif';
+}
+:root{
+    --clr: #34a8ff;
+    --bg-clr: #0C0D12;
+    --form-clr: #29313c;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--bg-clr);
+}
+form{
+    background-color: var(--form-clr);
+    padding:60px 80px;
+    border-radius: 10px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+form >h2{
+    color: #fff;
+    margin-bottom: 50px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+.form-group{
+    width:300px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.form-group input{
+    position: relative;
+    width: 100%;
+    color: #fff;
+    border:none;
+    padding: 10px 0;
+    outline: none;
+    font-size: 1rem;
+    letter-spacing: .15em;
+    background-color: transparent;
+    border-bottom: 2px solid #999;
+}
+.form-group label{
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    color: #999;
+    padding: 10px 0;
+    text-transform: uppercase;
+
+}
+.form-group label span{
+    position: relative;
+    display: inline-flex;
+    transition: 0.2s ease-in-out;
+    letter-spacing: 0.05em;
+}
+.form-group input:focus ~label span,
+.form-group input:valid ~label span{
+    color: var(--clr);
+    letter-spacing: 0.15em;
+    transform: translateY(-25px);
+}
+.form-group input:focus,
+.form-group input:valid{
+    border-bottom: 2px solid var(--clr);
+}
+.form-group input[type="submit"]{
+    background-color: var(--clr);
+    color: var(--bg-clr);
+    font-weight: 500;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+}
+form p{
+    color: #fff;
+    text-transform: uppercase;
+}
+form p a{
+    color:var(--clr);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}

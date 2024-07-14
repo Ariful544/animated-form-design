@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Animated form design</title>
+</head>
+<body>
+    <form action="#">
+        <h2>Create Account</h2>
+        <div class="form-group">
+            <input type="text"  required>
+            <label for="">UserName</label>
+        </div>
+        <div class="form-group">
+            <input type="email"  required>
+            <label for="">Email</label>
+        </div>
+        <div class="form-group">
+            <input type="password" required>
+            <label for="">Password</label>
+        </div>
+        <div class="form-group">
+            <input type="password" required>
+            <label for="">Confirm password</label>
+        </div>
+        <div class="form-group">
+           <input type="submit" value="Create">
+        </div>
+        <p>Already have an account? <a href="">Login</a></p>
+    </form>
+    <script>
+      let label = document.querySelectorAll('label').forEach(label =>{
+        label.innerHTML = label.innerText.split('').map((letter,i)=>`<span style="transition-delay:${i * 50}ms">${letter}</span>`).join('');
+      })
+    </script>
+</body>
+</html>
